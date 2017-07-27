@@ -1,0 +1,44 @@
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid $sand;
+    padding: 3em 0;
+// FIXED POSITION
+//    position: fixed;
+//    top: 0;
+//    right: 0;
+//    left: 0;
+    
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    .site-links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin-left: 30px;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            a {
+                font-weight: 600;
+                .special-sea {
+                    color: $sea;
+                    transition: color 0.3s;
+                    &:hover {
+                        color: $amber;
+                    }
+                }
+            }
+        }
+    }
+}

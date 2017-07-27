@@ -1,0 +1,92 @@
+.section {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .section-title {
+        font-family: $Playfair;
+        font-size: 2.5em;
+    }
+    .section-text {
+        margin-bottom: 2em;
+    }
+}
+
+$hero-height: 75vh;
+.hero-section {
+    background: url('../images/hero-image.jpg') 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: $hero-height;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section-choose-room {
+    .rooms {
+        display: flex;
+        width: 700px;
+        margin: 0 auto;
+        justify-content: space-between;
+        margin-bottom: 2em;
+        .room {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 200px;
+            width: 200px;
+            @extend %box-shadow;
+            transition: border 0.2s ease-in;
+            .room-title {
+                text-transform: uppercase;
+                font-size: 0.8em;
+                font-weight: 600;
+            }
+            .room-price {
+                font-family: $Playfair;
+                font-size: 1rem;
+                span {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+    
+    .selected-room {
+        border: 5px solid $amber;
+        .room-title {
+            color: $amber;
+        }
+    }
+    .img-gallery {
+        display: flex;
+        flex-flow: column;
+        width: 700px;
+        margin: 0 auto;
+    }
+    .img-thumbnails {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 100%;
+        .thumbnail {
+            width: 8em;
+            overflow: hidden;
+            border: 1px solid #fff;
+            img {
+                width: 100%;
+                height: auto;
+                transition: filter 0.3s;
+                &:hover {
+                    filter: blur(1px);
+                }
+            }
+            
+        }
+    }
+}
