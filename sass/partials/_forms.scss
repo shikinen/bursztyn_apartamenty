@@ -1,15 +1,19 @@
 form {
     display: flex;
-    margin: 0 2em;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    align-items: center;
+    @media #{$tablet} {
+        flex-direction: row;
+         margin: 0 2em;
+    }
     input {
         font-family: $Playfair;
         font-size: 1.2em;
         padding: 0.8em 1em;
-        margin: 0.5em 0;
+        margin: 0.5em;
         width: 35%;
     }
 }
@@ -61,20 +65,24 @@ input[type="submit"] {
     display: flex;
     flex-flow: column;
     align-items: center;
-    .personal-data-inputs {
-        display: flex;
-        justify-content: space-around;
+    @media #{$tablet} {
+        flex-flow: row;
     }
 }
+
 .main-form-container {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: white;
     border-bottom: 1em solid $sand;
-    margin-top: 2em;
-    height: 10em;
+    height: 20em;
+    width: 70%;
+    margin: 0 auto;
+    @media #{$tablet} {
+        height: 13em;
+        width: 100%;
+    }
     @extend %box-shadow;
 }

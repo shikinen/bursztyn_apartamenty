@@ -8,7 +8,8 @@ class Amber extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            display: false,
+            displayView: false,
+            displayRoomInfo: false,
             checkinDate: "",
             checkoutDate: "",
             numberOfGuests: "2",
@@ -21,12 +22,13 @@ class Amber extends React.Component {
     chooseRoom = roomName => {
         this.setState({
             selectedRoom: roomName,
+            displayRoomInfo: true,
         });
     }
     
     onSubmitDate = () => { 
         this.setState({
-            display: true,
+            displayView: true,
         });
     };
 
@@ -37,7 +39,7 @@ class Amber extends React.Component {
     };
 
     render() {
-        if (this.state.display === false) {
+        if (this.state.displayView === false) {
             return (
                 <div>
                     <Header />
@@ -62,7 +64,9 @@ class Amber extends React.Component {
                         selectedRoom={this.state.selectedRoom}
                         chooseRoom={this.chooseRoom}
                         name={this.state.name}
-                        email={this.state.email}/>
+                        email={this.state.email}
+                        displayRoomInfo={this.state.displayRoomInfo}
+                         />
                 </div>
             );
         }

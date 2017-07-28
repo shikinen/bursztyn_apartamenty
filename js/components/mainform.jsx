@@ -19,8 +19,9 @@ class MainForm extends React.Component {
         return (
             <div className="main-form-container">
                 <form className="main-form" onSubmit={this.onSubmitDate}>
-                    <input type="date" value={this.props.checkinDate} onChange={e => this.handleBookingChange(e, 'checkinDate')} />
-                    <input type="date" value={this.props.checkoutDate} onChange={e => this.handleBookingChange(e, 'checkoutDate')}/>
+                        <input type="date" value={this.props.checkinDate} onChange={e => this.handleBookingChange(e, 'checkinDate')} id="checkindate"/>
+                        <input type="date" value={this.props.checkoutDate} onChange={e => this.handleBookingChange(e, 'checkoutDate')} id="checkoutdate"/>
+
                     <select value={this.props.numberOfGuests} onChange={e => this.handleBookingChange(e, 'numberOfGuests')}>
                         <option value="1">1 Gość</option>
                         <option value="2">2 Gości</option>

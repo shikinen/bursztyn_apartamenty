@@ -17,11 +17,11 @@ class SearchPage extends React.Component {
                         handleBookingChange={this.props.handleBookingChange}
                         />
 
-                   <ChooseRoom selectedRoom={this.props.selectedRoom} chooseRoom={this.props.chooseRoom}/>
+                   <ChooseRoom selectedRoom={this.props.selectedRoom} chooseRoom={this.props.chooseRoom} displayRoomInfo={this.props.displayRoomInfo} selectedRoom={this.props.selectedRoom} />
 
                    <PersonalData name={this.props.name} email={this.props.email} handleBookingChange={this.props.handleBookingChange} />
 
-                   <button href="#" className="default-button">Rezerwuj</button>
+                   <button href="#" className="book-button">Rezerwuj</button>
                 </div>
             );
     }

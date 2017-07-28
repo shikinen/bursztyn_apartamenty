@@ -32,7 +32,12 @@ $hero-height: 75vh;
         width: 700px;
         margin: 0 auto;
         justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 2em;
+        @media #{$tablet} {
+            flex-direction: row;
+        }
         .room {
             display: flex;
             flex-flow: column;
@@ -63,6 +68,7 @@ $hero-height: 75vh;
             color: $amber;
         }
     }
+    
     .img-gallery {
         display: flex;
         flex-flow: column;

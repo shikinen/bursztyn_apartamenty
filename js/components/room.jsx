@@ -11,11 +11,15 @@ class Room extends React.Component {
         const classes = (this.props.room === this.props.selectedRoom) ? "room selected-room" : "room";
         
         return (
-                <div className={classes}>
-                    <div className="room-title">Apartament {this.props.room}</div>
-                    <div className="room-price"><span>{this.props.price}</span>PLN/noc</div>
-                    <button href="#" className="default-button" onClick={e => this.chooseRoom(this.props.room)}>Wybierz</button>
+                <div>
+                    <div className={classes}>
+                        <div className="room-title">Apartament {this.props.room}</div>
+                        <div className="room-price"><span>{this.props.price}</span>PLN/noc</div>
+                        <button href="#" className="default-button" onClick={e => this.chooseRoom(this.props.room)}>Wybierz</button>
+                    </div>
+                    
                 </div>
+            
         );
     }
 };
