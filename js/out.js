@@ -14695,7 +14695,7 @@ var Amber = function (_React$Component) {
             if (this.state.displayView === false) {
                 return _react2.default.createElement(
                     'div',
-                    null,
+                    { className: 'reveal' },
                     _react2.default.createElement(_header2.default, null),
                     _react2.default.createElement(_hero2.default, {
                         onSubmitDate: this.onSubmitDate,
@@ -14764,6 +14764,8 @@ var _roominfo2 = _interopRequireDefault(_roominfo);
 
 var _db = __webpack_require__(260);
 
+var _db2 = _interopRequireDefault(_db);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14785,9 +14787,9 @@ var ChooseRoom = function (_React$Component) {
         key: 'render',
         value: function render() {
             var roomDescription = "";
-            for (var i = 0; i < _db.rooms.length; i++) {
-                if (this.props.selectedRoom === _db.rooms[i].name) {
-                    roomDescription = _db.rooms[i].description;
+            for (var i = 0; i < _db2.default.length; i++) {
+                if (this.props.selectedRoom === _db2.default[i].name) {
+                    roomDescription = _db2.default[i].description;
                 }
             }
 
@@ -29266,7 +29268,6 @@ exports.default = RoomInfo;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rooms", function() { return rooms; });
 const rooms = [
     {
         id: 1,
@@ -29285,7 +29286,7 @@ const rooms = [
       }
   ];
 
-
+/* harmony default export */ __webpack_exports__["default"] = (rooms);
 
 
 /***/ })

@@ -2,7 +2,7 @@ import React from 'react';
 import SectionTemplate from './sectiontemplate.jsx'
 import Room from './room.jsx';
 import RoomInfo from './roominfo.jsx';
-import {rooms} from '../../db.js'
+import rooms from '../../db.js'
 
 
 class ChooseRoom extends React.Component {

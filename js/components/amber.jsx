@@ -51,7 +51,7 @@ class Amber extends React.Component {
     render() {
         if (this.state.displayView === false) {
             return (
-                <div>
+                <div className="reveal">
                     <Header />
                     <Hero
                         onSubmitDate={this.onSubmitDate}

@@ -16,4 +16,4 @@ const rooms = [
       }
   ];
 
-export {rooms}
+export default rooms;
