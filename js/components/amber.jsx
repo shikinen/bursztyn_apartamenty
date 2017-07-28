@@ -19,7 +19,7 @@ class Amber extends React.Component {
         };
     }
     
-    chooseRoom = roomName => {
+    chooseRoom = roomName => {        
         this.setState({
             selectedRoom: roomName,
             displayRoomInfo: true,
@@ -37,6 +37,16 @@ class Amber extends React.Component {
             [key]: e.target.value,
         });
     };
+
+    componentDidUpdate() {
+        const elementTop = document.getElementById('top');
+        const topPosition = elementTop.getBoundingClientRect().top + document.documentElement.scrollTop;
+        console.log(topPosition);
+        
+        if (this.state.displayRoomInfo) {
+            location.href = "#top";
+        }
+    }
 
     render() {
         if (this.state.displayView === false) {
